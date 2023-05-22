@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyDaysApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери свой день рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-dK-gRK">
+                                <rect key="frame" x="72.666666666666686" y="203.66666666666666" width="248" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="nmL-9j-gCi">
+                                <rect key="frame" x="36.666666666666657" y="255.66666666666663" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="ru_KZ"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="qxy-nV-1ho"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JU-Gt-Slx">
+                                <rect key="frame" x="136.66666666666666" y="491.66666666666674" width="119.99999999999997" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ws1-V0-Lt8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="aPb-nY-fyj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="dJF-O5-WqF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Результат">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0sn-MM-Pbl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ты наслаждешься жизнью уже ... дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHD-ig-LUX">
+                                <rect key="frame" x="74" y="561.66666666666663" width="245" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радуйся каждому дню!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-41-QFv">
+                                <rect key="frame" x="54" y="139" width="285" height="34.666666666666657"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="NA7-dK-gRK" firstAttribute="top" secondItem="OIZ-41-QFv" secondAttribute="bottom" constant="30" id="4r5-Uj-ZMd"/>
+                            <constraint firstItem="nmL-9j-gCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7bk-VE-cuv"/>
+                            <constraint firstItem="nmL-9j-gCi" firstAttribute="top" secondItem="NA7-dK-gRK" secondAttribute="bottom" constant="30" id="7vz-D2-fyv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lHD-ig-LUX" secondAttribute="trailing" constant="74" id="Ap8-eq-BR3"/>
+                            <constraint firstItem="OIZ-41-QFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HkF-IW-SOK"/>
+                            <constraint firstItem="lHD-ig-LUX" firstAttribute="top" secondItem="1JU-Gt-Slx" secondAttribute="bottom" constant="20" id="Lfn-tD-IZZ"/>
+                            <constraint firstItem="1JU-Gt-Slx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uvl-7s-Pi5"/>
+                            <constraint firstItem="NA7-dK-gRK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VRg-Oa-PzV"/>
+                            <constraint firstItem="1JU-Gt-Slx" firstAttribute="top" secondItem="nmL-9j-gCi" secondAttribute="bottom" constant="20" id="bZ7-wE-6mI"/>
+                            <constraint firstItem="lHD-ig-LUX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="gA2-eX-m8w"/>
+                            <constraint firstItem="OIZ-41-QFv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="pPG-B9-q3B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="lHD-ig-LUX" id="jlo-8b-Taa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
